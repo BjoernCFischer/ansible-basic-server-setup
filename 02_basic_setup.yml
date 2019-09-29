@@ -1,0 +1,14 @@
+---
+
+# Playbook for the basic server setup. Basic tools (less and such) hostname setting, ssh hardening, aliases and firewall
+
+- hosts: all
+  vars:
+    ansible_port: "{{ ssh_port | default('22') }}"
+    ansible_ssh_private_key_file: "{{ unprivileged_user_privatekey_file }}"
+  remote_user: "{{ unprivileged_user }}"
+  become: true
+  gather_facts: false
+  roles:
+    - determine_ssh_port
+    - basic_server

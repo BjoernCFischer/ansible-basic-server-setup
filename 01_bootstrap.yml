@@ -1,0 +1,13 @@
+---
+
+# Playbook for the minimal bootstrapping of a Debian Server. Installs python, changes the root password and creates an unpriviliged sudo user
+
+- hosts: all
+  gather_facts: false
+  remote_user: root
+  vars:
+    ansible_ssh_private_key_file: "{{ root_user_privatekey_file }}"
+  roles:
+    - install_python
+    - root_password
+    - sudo_user
