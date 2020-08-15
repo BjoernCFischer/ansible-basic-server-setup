@@ -1,0 +1,9 @@
+[submodule "roles/ansible-install-python"]
+	path = roles/ansible-install-python
+	url = https://github.com/BjoernCFischer/ansible-install-python.git
+[submodule "roles/ansible-root-password"]
+	path = roles/ansible-root-password
+	url = https://github.com/BjoernCFischer/ansible-root-password.git
+[submodule "roles/ansible-sudo-user"]
+	path = roles/ansible-sudo-user
+	url = https://github.com/BjoernCFischer/ansible-sudo-user.git
